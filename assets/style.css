@@ -182,11 +182,6 @@ a {
   padding: 5px 12px;
 }
 
-.row-side .badge {
-  max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
 
 .badge-soft-on-navy {
   background: rgba(255, 255, 255, 0.1);

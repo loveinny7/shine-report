@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{PAGE_TITLE}}</title>
+<meta name="description" content="{{DESCRIPTION}}">
+<meta name="theme-color" content="#1B2A4A">
+<meta property="og:title" content="{{PAGE_TITLE}}">
+<meta property="og:description" content="{{DESCRIPTION}}">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap">
+<link rel="stylesheet" href="{{ASSET}}">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="kicker"><span>SHINE ENGLISH</span><span class="sep"></span><span class="kr">샤인영어</span></div>
+    <h1 class="hero-title">일간 학습 <span class="thin">리포트</span></h1>
+    <p class="hero-date">{{DATE_LABEL}}</p>
+    <div class="hero-foot">
+      <span class="badge">{{BADGE}}</span>
+      <span class="hero-stamp">Daily Report</span>
+    </div>
+  </header>
+
+  <section class="student" aria-label="학생 정보">
+    <span class="avatar" aria-hidden="true">{{INITIAL}}</span>
+    <div>
+      <p class="student-name">{{STUDENT_NAME}}</p>
+      <p class="student-meta">{{SCHOOL}}<span class="dot">·</span>{{GRADE}}</p>
+    </div>
+  </section>
+
+  <main class="content">
+
+    <section class="card">
+      <h2 class="card-title">오늘 수업 <span class="en">Today&rsquo;s Class</span></h2>
+      <ul class="lessons">
+{{LESSONS}}
+      </ul>
+{{NEXT_CLASS}}
+    </section>
+
+    <section class="card">
+      <h2 class="card-title">오늘 숙제 <span class="en">Homework</span></h2>
+      <ul class="checks">
+{{HOMEWORK}}
+      </ul>
+      <p class="check-note">{{HOMEWORK_NOTE}}</p>
+    </section>
+
+    <section class="card">
+      <h2 class="card-title">테스트 기록 <span class="en">Records</span></h2>
+      <div class="tiles">
+{{TESTS}}
+      </div>
+    </section>
+
+    <section class="card note-card">
+      <h2 class="card-title">선생님 한마디 <span class="en">From the Teacher</span></h2>
+      <p class="note-lead">{{NOTE_LEAD}}</p>
+      <p class="note-body">{{NOTE_BODY}}</p>
+      <div class="sign">
+        <span class="sign-line" aria-hidden="true"></span>
+        <span class="sign-name">{{SIGN_NAME}}</span>
+        <span class="sign-sub">{{SIGN_SUB}}</span>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="foot">
+    <div class="foot-rule" aria-hidden="true"></div>
+    <p>{{FOOTER_NOTE}}</p>
+    <p class="brand">Shine English · Daegu</p>
+  </footer>
+
+</div>
+</body>
+</html>

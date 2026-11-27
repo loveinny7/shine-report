@@ -182,6 +182,12 @@ a {
   padding: 5px 12px;
 }
 
+.row-side .badge {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .badge-soft-on-navy {
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.16);
@@ -580,12 +586,14 @@ a {
 .report-list {
   padding: 16px 18px 0;
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 11px;
 }
 
 .report-row {
   display: flex;
   align-items: center;
+  min-width: 0;
   gap: 13px;
   padding: 15px 15px 15px 14px;
   background: var(--paper);
@@ -617,7 +625,9 @@ a {
 .row-name {
   display: flex;
   align-items: baseline;
-  gap: 7px;
+  flex-wrap: wrap;
+  min-width: 0;
+  gap: 2px 7px;
   font-size: 15.5px;
   font-weight: 700;
   letter-spacing: -0.02em;

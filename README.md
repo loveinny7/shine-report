@@ -43,9 +43,9 @@ build.py                       JSON → HTML 빌드 스크립트 (파이썬 표�
 
 3. 빌드하고 확인한 뒤 올립니다.
    ```
-   python3 build.py
-   git add -A && git commit -m "2026-11-28 김서준 리포트" && git push
+   ./publish.sh "2026-11-28 김서준 리포트"      # 빌드 → 커밋 → main·gh-pages 동시 push
    ```
+   (`publish.sh`가 없으면 `python3 build.py` 후 `git add -A && git commit -m "..." && git push origin main && git push origin main:gh-pages`)
 
 `index.html`은 `data/*.json` 전체를 읽어 날짜 최신순으로 자동 갱신되므로, 목록은 따로 손대지 않아도 됩니다.
 
@@ -72,4 +72,8 @@ python3 build.py data/2026-11-28-kimseojun.json   # 해당 페이지만 재생�
 
 ## 배포
 
-`main` 브랜치 루트를 그대로 GitHub Pages로 서비스합니다. `.nojekyll` 파일이 있어 Jekyll 처리를 거치지 않습니다.
+- 사이트: <https://loveinny7.github.io/shine-report/>
+- **서비스 브랜치: `gh-pages`** (루트 경로). GitHub Pages가 `gh-pages` 브랜치를 자동 게시하도록 설정되어 있습니다.
+- `main`은 작업 원본(소스) 브랜치입니다. 두 브랜치는 항상 같은 내용으로 유지하며, `publish.sh`가 둘 다 push합니다.
+- GitHub 웹에서 `main`만 직접 고치면 사이트에는 반영되지 않습니다. 웹에서 고치셨다면 `gh-pages`로도 옮겨 주셔야 합니다(또는 `Settings → Pages → Branch`를 `main`으로 바꾸시면 이 주의가 사라집니다).
+- `.nojekyll` 파일이 있어 Jekyll 처리를 거치지 않습니다.
